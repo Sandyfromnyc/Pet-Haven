@@ -25,8 +25,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/pet-haven',
-    failureRedirect: '/pet-haven'
+    successRedirect: '/',
+    failureRedirect: '/'
   }
 ));
 

@@ -9,6 +9,7 @@ var passport = require('passport');
 
 require('dotenv').config();
 require('./config/database');
+require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -23,8 +24,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method')); 
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
   secret: process.env.SECRET,
