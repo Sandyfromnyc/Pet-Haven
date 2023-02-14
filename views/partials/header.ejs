@@ -15,8 +15,6 @@
     
 </head>
 <body>
-    <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-    <a href="/logout" class="logout">LOG OUT</a>
     <div>
         <h1 id="title">Pet Haven</h1>
     </div>
@@ -25,22 +23,31 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="nav  p-5">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/services/new">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Become a sitter</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">FAQs</a>
-            </li>
-        </ul>
-        
-</nav>
+        <% if (user) { %>
+            <ul class="nav  p-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sitterListings/new">Add your listing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Become a sitter</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout" class="logout">LOG OUT</a>
+                </li>
+        <% } else { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+                    </li>
+        <% } %>
+                </ul>
+                
+            </nav>
 
 
     

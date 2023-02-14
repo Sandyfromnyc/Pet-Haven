@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+
+<% sitterListings.forEach(function(s) {  %>
+    <%= s.userName %>
+    <%= s.location %>
+   <img src='<%= s.userAvatar %>'>
+
+<% }); %>
+
+<%- include('../partials/footer') %>

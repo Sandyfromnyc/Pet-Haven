@@ -25,8 +25,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/home',
-    failureRedirect: '/home'
+    successRedirect: '/',
+    failureRedirect: '/'
   }
 ));
 
@@ -34,7 +34,7 @@ router.get('/oauth2callback', passport.authenticate(
 router.get('/logout', function(req, res){
   req.logout(function() {
     // change path for your "landing page"
-    res.redirect('/pet-haven');
+    res.redirect('/');
   });
 });
 
