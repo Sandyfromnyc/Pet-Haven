@@ -1,18 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const serviceSchema = new Schema ({
-    service: {
+const photoSchema = new Schema({
+    photoUrl: {
         type: String,
-        enum: ['Dog sitting', 'Dog walking', 'Boarding', 'Drop-In visit'],   
+    
     },
-
-    price: {
-        type: Number,
-        min: 1, 
-        max: 9999
-    },
-
+    
     listing: {
         type: Schema.Types.ObjectId,
         ref: 'Sitterlisting', 
@@ -30,4 +24,4 @@ const serviceSchema = new Schema ({
 
 
 
-module.exports = mongoose.model('Service', serviceSchema);
+module.exports = mongoose.model('Photo', photoSchema);

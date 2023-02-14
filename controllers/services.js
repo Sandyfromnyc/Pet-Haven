@@ -1,10 +1,10 @@
-const Service = require('../models/service');
+const Service = require('../models/appointment');
 
 module.exports = {
-    index,
+    new: newAppt,
 
 }
 
-function index(req, res) {
-    
+function new(req, res) {
+
 }
