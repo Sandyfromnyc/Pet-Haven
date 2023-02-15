@@ -8,5 +8,8 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 // POST /movies/:id/reviews
 router.post('/sitterListings/:id/reviews', ensureLoggedIn, reviewsCtrl.create);
 
+// DELETE /reviews
+router.delete('/reviews/:id', ensureLoggedIn, reviewsCtrl.delete);
 
+module.exports = router;
 
