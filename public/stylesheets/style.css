@@ -17,10 +17,10 @@ body {
 }
 
 .login {
-  display: flex;
+  display:inline;
   justify-content: right;
-  align-items: center;
-  height: 30px;
+  align-items: right;
+  height: 10px;
 }
 
 .login img {
@@ -36,7 +36,7 @@ body {
 
 .navbar {
   
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   cursor: pointer;
   background-color: rgb(214, 247, 251);

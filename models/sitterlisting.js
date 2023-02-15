@@ -29,6 +29,7 @@ const sitterlistingSchema = new Schema({
   location: {
     type: String,
 },
+    
 
 review: [reviewSchema],
 

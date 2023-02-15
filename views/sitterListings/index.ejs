@@ -1,10 +1,24 @@
 <%- include('../partials/header') %>
 
-<% sitterListings.forEach(function(s) {  %>
-    <%= s.userName %>
-    <%= s.location %>
-   <img src='<%= s.userAvatar %>'>
 
-<% }); %>
+<table id="'Sitters"> 
+    <thead>
+     <tr>
+        <th>Sitter Name</th>
+    </tr>
+</thead>
+<tbody>
+
+    
+    <% sitterListings.forEach(function(s) {  %>
+    <tr>
+      <td><%= s.userName %></td>
+       <td> <%= s.location %></td>
+       <td><img src='<%= s.userAvatar %>'></td>
+    </tr>
+    <% }); %>
+        
+    </tbody>
+</table>
 
 <%- include('../partials/footer') %>
