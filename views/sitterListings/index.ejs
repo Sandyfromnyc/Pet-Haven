@@ -4,7 +4,7 @@
 <table id="'Sitters"> 
     <thead>
      <tr>
-        <th>Sitter Name</th>
+        <th>Sitters</th>
     </tr>
 </thead>
 <tbody>
@@ -14,7 +14,8 @@
     <tr>
       <td><%= s.userName %></td>
        <td> <%= s.location %></td>
-       <td><img src='<%= s.userAvatar %>'></td>
+       <td><img src="<%= s.userAvatar %>"></td>
+       <td><a href="/sitterListings/<%= s.id %>">Details</a></td>
     </tr>
     <% }); %>
         

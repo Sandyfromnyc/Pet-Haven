@@ -10,6 +10,9 @@ router.get('/', sitterListingsCtrl.index);
 // GET /sitterListings/new - displaying a form 
 router.get('/new', ensureLoggedIn, sitterListingsCtrl.new);
 
+// GET  /sitterListings/:id
+router.get('/:id', sitterListingsCtrl.show);
+
 // POST /sitterListings - handles the new form being submitted
 router.post('/', ensureLoggedIn, sitterListingsCtrl.create);
 

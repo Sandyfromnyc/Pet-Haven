@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const serviceSchema = new Schema ({
     service: {
         type: String,
-        enum: ['Dog sitting', 'Dog walking', 'Boarding', 'Drop-In visit'],   
+        enum: ['Dog Sitting', 'Dog Walking', 'Boarding', 'Drop-In'],   
     },
 
     price: {

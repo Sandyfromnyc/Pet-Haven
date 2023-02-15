@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+   <img src="<%= sitterListing.userAvatar%>" alt="<%= sitterListing.userName%>">
+
+<h2>  <%= sitterListing.userName  %>  </h2>
+
+<h3>  <%= sitterListing.location %>  </h3>
+
+<td>
+  <% if (user?._id.equals(sitterListing.user)) { %>
+    <form action="/sitterListings/<%= sitterListing._id %>/services" method="POST">
+      <label>Service:
+        <select name="service">
+            <option value="Dog Sitting">Dog Sitting</option>
+            <option value="Dog Walking">Dog Walking</option>
+            <option value="Boarding">Boarding</option>
+            <option value="Drop In">Drop In Visit</option>
+           
+        </select>
+</label>
+<input type="number" name="price">
+
+      <button type="submit">add service</button>
+    </form>
+  <% } %>
+</td>
+
+
+<%- include('../partials/footer') %>
