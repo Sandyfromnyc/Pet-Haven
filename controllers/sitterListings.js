@@ -6,7 +6,15 @@ module.exports = {
   new: newListing,
   create,
   show,
+  delete: deleteSitterListing
 };
+
+function deleteSitterListing(req, res) {
+    SitterListing.findOneAndDelete({_id: req.params.id, user:req.user._id}, function(err) {
+        res.redirect('/sitterListings');
+    } 
+    );
+}
 
 function show(req, res) {
   SitterListing.findById(req.params.id, function (err, sitterListing) {

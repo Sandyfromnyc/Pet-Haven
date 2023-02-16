@@ -16,6 +16,7 @@ router.get('/:id', sitterListingsCtrl.show);
 // POST /sitterListings - handles the new form being submitted
 router.post('/', ensureLoggedIn, sitterListingsCtrl.create);
 
+router.delete('/:id', sitterListingsCtrl.delete);
 
 
 module.exports = router

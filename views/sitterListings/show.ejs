@@ -15,7 +15,7 @@
             <option value="Dog Sitting">Dog Sitting</option>
             <option value="Dog Walking">Dog Walking</option>
             <option value="Boarding">Boarding</option>
-            <option value="Drop In">Drop In Visit</option>
+            <option value="Drop-In Visit">Drop-In Visit</option>
            
         </select>
 </label>
@@ -25,6 +25,25 @@
     </form>
   <% } %>
 </td>
-
+<div>
+  <table>
+    <tbody>
+      <% services.forEach(function(service) { %>
+        <tr>
+          <td> <%= service.service %></td>
+         <td> <%= service.price %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<td> 
+  <br>
+<% if (user?._id.equals(sitterListing.user)) { %>
+  <form action="/sitterListings/<%= sitterListing._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete your Listing</button>
+  </form>
+<% } %>
+</td>
 
 <%- include('../partials/footer') %>

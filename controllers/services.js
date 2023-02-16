@@ -3,8 +3,9 @@ const Service = require("../models/service");
 
 module.exports = {
     create,
+    delete: deleteService
 
-}
+};
 
 function create(req, res) {
     req.body.sitterListing = req.params.id; 
@@ -16,5 +17,12 @@ function create(req, res) {
     Service.create(req.body, function(err, service) {
         console.log(err)
         res.redirect(`/sitterListings/${req.params.id}`)
-    })
+    });
+}
+
+function deleteService(req, res) {
+    Service.findOneAndDelete({_id: req.params.id, sitterListing: req.user._id}, function(err) {
+        res.redirect('/sitterListings');
+    } 
+    );
 }

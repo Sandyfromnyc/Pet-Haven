@@ -16,6 +16,14 @@
        <td> <%= s.location %></td>
        <td><img src="<%= s.userAvatar %>"></td>
        <td><a href="/sitterListings/<%= s.id %>">Details</a></td>
+       <td> 
+        <br>
+      <% if (user?._id.equals(s.user)) { %>
+        <form action="/sitterListings/<%= s._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete your Listing</button>
+        </form>
+    <% } %>
+      </td>
     </tr>
     <% }); %>
         
