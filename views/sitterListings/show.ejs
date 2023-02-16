@@ -23,6 +23,11 @@
 
       <button type="submit">add service</button>
     </form>
+    <form action="/sitterListings/<%= sitterListing._id %>/photos" method="POST">
+      <input type="text" name="photoUrl">
+
+      <button type="submit">add photo</button>
+    </form>
   <% } %>
 </td>
 <div>
@@ -32,7 +37,32 @@
         <tr>
           <td> <%= service.service %></td>
          <td> <%= service.price %></td>
+         <% if (user?._id.equals(service.user)) { %>
+          <td>
+          <form action="/services/<%= service._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete your service</button>
+          </form>
+          </td>
         </tr>
+        <% } %>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<div>
+  <table>
+    <tbody>
+      <% photos.forEach(function(photo) { %>
+        <tr>
+          <td> <img src="<%= photo.photoUrl%>" alt="<%= photo.userName%>"></td>
+          <% if (user?._id.equals(photo.user)) { %>
+            <td>
+            <form action="/photos/<%= photo._id %>?_method=DELETE" method="POST">
+              <button type="submit">Delete your photo</button>
+            </form>
+            </td>
+          </tr>
+          <% } %>
       <% }) %>
     </tbody>
   </table>

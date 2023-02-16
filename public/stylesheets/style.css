@@ -4,10 +4,11 @@
 }
 
 body {
-  padding: 10px;
-  margin: 0 auto;
+  padding: 5px;
+  margin: auto;
   justify-content: center;
-  position:relative
+  position:relative;
+  margin-bottom: 0px;
   
 }
 #title {
@@ -47,10 +48,6 @@ body {
   justify-content: space-evenly;
 }
 
-footer > img {
-  padding: 5px;
-  object-fit: contain;
-  margin: auto;
-  width: 50px;
+.paws {
+ width: 97%;
 }
-

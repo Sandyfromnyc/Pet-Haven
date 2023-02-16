@@ -1,5 +1,7 @@
 const SitterListing = require("../models/sitterlisting");
 const Service = require("../models/service");
+const Photo = require("../models/photo");
+
 
 module.exports = {
   index,
@@ -10,6 +12,10 @@ module.exports = {
 };
 
 function deleteSitterListing(req, res) {
+    SitterListing.find({_id: req.params.id, user:req.user._id}, function(err) {
+      Service.deleteMany({sitterListing: req.params.id}, function(err) { })
+      Photo.deleteMany({sitterListing: req.params.id}, function(err) { })
+    })
     SitterListing.findOneAndDelete({_id: req.params.id, user:req.user._id}, function(err) {
         res.redirect('/sitterListings');
     } 
@@ -18,8 +24,11 @@ function deleteSitterListing(req, res) {
 
 function show(req, res) {
   SitterListing.findById(req.params.id, function (err, sitterListing) {
-    Service.find({ sitterListing: sitterListing._id },function (err, services) {
-        res.render("sitterListings/show", {title: "Service Details",services,sitterListing});
+    Service.find({ listing: sitterListing._id },function (err, services) {
+      Photo.find({ listing: sitterListing._id}, function(err, photos) {
+        res.render("sitterListings/show", {title: "Service Details",services,sitterListing, photos});
+        
+      })
       });
   });
 }
