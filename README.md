@@ -11,19 +11,17 @@
 
   ## :pencil: App description
 
-  An application a pet sitter is able to enter their services and their prices. 
+  An application a pet sitter is able to enter their location and services with their prices. 
   A user can view the sitters and search for services. 
 
 <details open>
   <summary> Purpose </summary>
     
-    1. A pet sitter logs in with their Google account.
-
-    2. A pet sitter is able to add or delete thier services along with thier price.
-
-    3. A pet sitter is able to add or delete photos.
-
-    4. A pet sitter is able to edit their location. 
+    1. A visitor is able to view list of sitters available.
+    2  A visitor is able to become a sitter by logging with their Google account.
+    3. A pet sitter is able to add or delete thier services along with thier price.
+    4. A pet sitter is able to add or delete their photos.
+    5. A pet sitter is able to edit their location.  
     
     
 </details>
@@ -50,7 +48,10 @@
 ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
-
+![MongoDB](https://img.shields.io/badge/-MongoDB-05122A?style=flat&logo=mongodb)
+![Express](https://img.shields.io/badge/-Express-05122A?style=flat&logo=express)
+![Trello](https://img.shields.io/badge/-Trello-05122A?style=flat&logo=trello)
+![Heroku](https://img.shields.io/badge/-Heroku-05122A?style=flat&logo=heroku)
 
 ## :fire: Getting Started
 
@@ -61,8 +62,8 @@
   >
 </details>
 
-## Ice Box
-  Reviews
+## Upcomng Features
+  Reviews, 
   Contact Sitter
   
   
