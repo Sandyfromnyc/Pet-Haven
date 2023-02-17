@@ -13,10 +13,13 @@ router.get('/new', ensureLoggedIn, sitterListingsCtrl.new);
 // GET  /sitterListings/:id
 router.get('/:id', sitterListingsCtrl.show);
 
+router.get('/:id/edit', ensureLoggedIn, sitterListingsCtrl.edit);
+
+router.put('/:id', ensureLoggedIn, sitterListingsCtrl.update);
+
 // POST /sitterListings - handles the new form being submitted
 router.post('/', ensureLoggedIn, sitterListingsCtrl.create);
 
-router.get('/:id/edit', ensureLoggedIn, sitterListingsCtrl.edit);
 
 router.delete('/:id', sitterListingsCtrl.delete);
 

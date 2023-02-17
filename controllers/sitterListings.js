@@ -14,18 +14,18 @@ module.exports = {
 };
 
 function update(req, res) {
-  Property.findByIdAndUpdate({_id: req.params.id, user:req.user._id}, req.body,{new: true},
-    function(err, location) {
+  SitterListing.findByIdAndUpdate({_id: req.params.id, user:req.user._id}, req.body,{new: true},
+    function(err, sitterListing) {
       console.log(err)
-    if (err || !location) return res.redirect('/sitterListings');
-      res.redirect(`/sitterListings/${req.params.id}`);
+    if (err || !sitterListing) return res.redirect('/sitterListings');
+      res.redirect(`/sitterListings/${sitterListing._id}`);
     });
 }
 
 function edit(req, res) {
   SitterListing.findById(req.params.id, function(err, sitterListing){
     if (err || !SitterListing) return res.redirect('/sitterListings');
-    res.render('sitterListings/edit', {title: "edit"}, sitterListing);
+    res.render('sitterListings/edit', {title: "edit", sitterListing});
   });
 }
 
@@ -40,16 +40,34 @@ function deleteSitterListing(req, res) {
     );
 }
 
-function show(req, res) {
-  SitterListing.findById(req.params.id, function (err, sitterListing) {
-    Service.find({ listing: sitterListing._id },function (err, services) {
-      Photo.find({ listing: sitterListing._id}, function(err, photos) {
-        res.render("sitterListings/show", {title: "Service Details", services, sitterListing, photos});
-        
-      })
-      });
-  });
-}
+// function show(req, res) {
+//   SitterListing.findById(req.params.id)
+//     .populate("user")
+//     .exec(function (err, sitterListing) {
+//       const myServices = Service.find({ listing: sitterListing._id },{}) ;
+//       const myPhotos = Photo.find({ listing: sitterListing._id });
+//       console.log(myServices);
+//     });
+//   res.render("/sitterListing/show", {
+//     title: "Service Details",
+//     myServices,
+//     myPhotos,
+//     sitterListing,
+//   });
+// }
+
+
+  function show(req, res) {
+    SitterListing.findById(req.params.id, function (err, sitterListing) {
+      Service.find({ listing: sitterListing._id },function (err, services) {
+        Photo.find({ listing: sitterListing._id}, function(err, photos) {
+          res.render("sitterListings/show", {title: "Service Details", services, sitterListing, photos});
+          
+        })
+        });
+    });
+  }
+  
 
 function create(req, res) {
   req.body.user = req.user._id;

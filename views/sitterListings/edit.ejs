@@ -3,18 +3,16 @@
 
 <h2>Edit Your Location</h2>  
 
-<% if (user?._id.equals(sitterListing.user)) { %>
+<br>
 
-    <form action="/sitterListings/edit" method="POST">
+
+    <form action="/sitterListings/<%= sitterListing.id %>?_method=PUT" method="POST">
 
         <label>Location</label>
         <input type="text" name="location">
 
-        <input type="submit" value="update location">
-
-        <button type="submit">update</button>
+        <input type="submit" name="update location">
     </form>
-<% } %>
+    <br>
 
-
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
