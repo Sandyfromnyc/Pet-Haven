@@ -2,7 +2,7 @@
 
   # PET HAVEN
 
-  ### [CLICK TO VIEW](https://github.com/Sandyfromnyc/Pet-Haven.git)
+  ### [CLICK TO VIEW](https://git.heroku.com/pet-haven-ga.git)
 
 
   ##### Sandra Ariza
@@ -22,8 +22,7 @@
     3. A pet sitter is able to add or delete thier services along with thier price.
     4. A pet sitter is able to add or delete their photos.
     5. A pet sitter is able to edit their location.  
-    
-    
+
 </details>
 
 
