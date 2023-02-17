@@ -5,7 +5,7 @@
 
 <br>
 
-
+<% if (user?._id.equals(sitterListing.user)) { %>
     <form action="/sitterListings/<%= sitterListing.id %>?_method=PUT" method="POST">
 
         <label>Location</label>
@@ -14,5 +14,7 @@
         <input type="submit" name="update location">
     </form>
     <br>
+<% } %>
+
 
     <%- include('../partials/footer') %>
