@@ -35,6 +35,11 @@
   |:-------------:| -----------|
   | <h3>Home Page</h3> | <img src="https://i.imgur.com/Ju6qB1A.jpg" width="700"/>
   | <h3 align="center">Sitters</h3> | <img src="https://i.imgur.com/ajZsZiT.jpg" width="700"/>
+  | <h3 align="center">Sitters List</h3> | <img src="https://i.imgur.com/ajZsZiT.jpg" width="700"/>
+  | <h3 align="center">Sitters List Logged in</h3> | <img src="https://i.imgur.com/ZHaIgv5.jpg" width="700"/>
+  | <h3 align="center">Sitter logged in adds listing</h3> | <img src="https://i.imgur.com/7K7M2yZ.jpg" width="700"/>
+  | <h3 align="center">Sitter logged in edit/delete</h3> | <img src="https://i.imgur.com/IJLANZO.jpg" width="700"/>
+  | <h3 align="center">Sitter logged in edit</h3> | <img src="https://i.imgur.com/7K7M2yZ.jpg" width="700"/>
  | 
 
 
