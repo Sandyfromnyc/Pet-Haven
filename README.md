@@ -56,9 +56,7 @@
 
 <details open>
   <summary> Find a Pet Sitter </summary>
-  <a href="https://github.com/Sandyfromnyc/Pet-Haven.git"
-    > https://github.com/Sandyfromnyc/Pet-Haven.git</a
-  >
+  <a href="https://git.heroku.com/pet-haven-ga.git"> https://git.heroku.com/pet-haven-ga.git</a>
 </details>
 
 ## Upcomng Features
