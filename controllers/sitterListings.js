@@ -8,8 +8,27 @@ module.exports = {
   new: newListing,
   create,
   show,
-  delete: deleteSitterListing
+  delete: deleteSitterListing,
+  edit,
+  update
 };
+
+function update(req, res) {
+  Property.findByIdAndUpdate({_id: req.params.id, user:req.user._id}, req.body,{new: true},
+    function(err, location) {
+      console.log(err)
+    if (err || !location) return res.redirect('/sitterListings');
+      res.redirect(`/sitterListings/${req.params.id}`);
+    }
+  );
+}
+
+function edit(req, res) {
+  SitterListing.findOne({_id: req.params.id, user:req.user._id}, function(err){
+    if (err || !sitterListings) return res.redirect('/sitterListings');
+    res.render('sitterListings/edit', {location});
+  });
+}
 
 function deleteSitterListing(req, res) {
     SitterListing.find({_id: req.params.id, user:req.user._id}, function(err) {

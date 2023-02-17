@@ -4,7 +4,7 @@
 }
 
 body {
-  padding: 5px;
+  padding: 10px;
   margin: auto;
   justify-content: center;
   position:relative;
@@ -49,5 +49,5 @@ body {
 }
 
 .paws {
- width: 97%;
+ width: 95%;
 }
