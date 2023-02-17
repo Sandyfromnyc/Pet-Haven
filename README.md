@@ -39,6 +39,11 @@
   | <h3 align="center">Sitter logged in edit</h3> | <img src="https://i.imgur.com/7K7M2yZ.jpg" width="700"/>
  | 
 
+<details open>
+  <summary> Trello Board </summary>
+  <a href="https://trello.com/b/vbWaqz9T/project-two"> https://trello.com/b/vbWaqz9T/project-two </a>
+</details>
+
 
 
   ## :computer: Technologies Used
