@@ -19,14 +19,13 @@ function update(req, res) {
       console.log(err)
     if (err || !location) return res.redirect('/sitterListings');
       res.redirect(`/sitterListings/${req.params.id}`);
-    }
-  );
+    });
 }
 
 function edit(req, res) {
-  SitterListing.findOne({_id: req.params.id, user:req.user._id}, function(err){
-    if (err || !sitterListings) return res.redirect('/sitterListings');
-    res.render('sitterListings/edit', {location});
+  SitterListing.findById(req.params.id, function(err, sitterListing){
+    if (err || !SitterListing) return res.redirect('/sitterListings');
+    res.render('sitterListings/edit', {title: "edit"}, sitterListing);
   });
 }
 
@@ -45,7 +44,7 @@ function show(req, res) {
   SitterListing.findById(req.params.id, function (err, sitterListing) {
     Service.find({ listing: sitterListing._id },function (err, services) {
       Photo.find({ listing: sitterListing._id}, function(err, photos) {
-        res.render("sitterListings/show", {title: "Service Details",services,sitterListing, photos});
+        res.render("sitterListings/show", {title: "Service Details", services, sitterListing, photos});
         
       })
       });

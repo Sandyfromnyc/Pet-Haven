@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+
+<h2>Edit Your Location</h2>  
+
+<% if (user?._id.equals(sitterListing.user)) { %>
+
+    <form action="/sitterListings/edit" method="POST">
+
+        <label>Location</label>
+        <input type="text" name="location">
+
+        <input type="submit" value="update location">
+
+        <button type="submit">update</button>
+    </form>
+<% } %>
+
+
+<%- include('../partials/footer') %>
