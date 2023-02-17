@@ -2,7 +2,7 @@
 
   # PET HAVEN
 
-  ### [CLICK TO VIEW](https://git.heroku.com/pet-haven-ga.git)
+  ### [CLICK TO VIEW](https://pet-haven-ga.herokuapp.com)
 
 
   ##### Sandra Ariza
@@ -56,7 +56,7 @@
 
 <details open>
   <summary> Find a Pet Sitter </summary>
-  <a href="https://git.heroku.com/pet-haven-ga.git"> https://git.heroku.com/pet-haven-ga.git</a>
+  <a href="https://pet-haven-ga.herokuapp.com/"> https://pet-haven-ga.herokuapp.com/</a>
 </details>
 
 ## Upcomng Features
