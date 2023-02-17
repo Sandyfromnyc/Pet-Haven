@@ -31,7 +31,7 @@
   |   Description | Screenshot | 
   |:-------------:| -----------|
   | <h3 align="center">wireframe</h3> | <img src="https://i.imgur.com/SqrTqZD.jpg" width="700"/>
-    <h3>Home Page</h3> | <img src="https://i.imgur.com/Ju6qB1A.jpg" width="700"/>
+  | <h3>Home Page</h3> | <img src="https://i.imgur.com/Ju6qB1A.jpg" width="700"/>
   | <h3 align="center">Sitters</h3> | <img src="https://i.imgur.com/ajZsZiT.jpg" width="700"/>
   | <h3 align="center">Sitters List</h3> | <img src="https://i.imgur.com/slW6kvD.jpg" width="700"/>
   | <h3 align="center">Sitters List Logged in</h3> | <img src="https://i.imgur.com/ZHaIgv5.jpg" width="700"/>

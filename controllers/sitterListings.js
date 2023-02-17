@@ -40,22 +40,6 @@ function deleteSitterListing(req, res) {
     );
 }
 
-// function show(req, res) {
-//   SitterListing.findById(req.params.id)
-//     .populate("user")
-//     .exec(function (err, sitterListing) {
-//       const myServices = Service.find({ listing: sitterListing._id },{}) ;
-//       const myPhotos = Photo.find({ listing: sitterListing._id });
-//       console.log(myServices);
-//     });
-//   res.render("/sitterListing/show", {
-//     title: "Service Details",
-//     myServices,
-//     myPhotos,
-//     sitterListing,
-//   });
-// }
-
 
   function show(req, res) {
     SitterListing.findById(req.params.id, function (err, sitterListing) {
